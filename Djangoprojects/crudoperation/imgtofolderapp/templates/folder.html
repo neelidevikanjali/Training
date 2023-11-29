@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Folder Image</title>
+</head>
+<body>
+<form method="post">
+    <table border="1">
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>image</th>
+        </tr>
+        {{get_image}}
+        {% for i in image %}
+        <tr>
+            <td>{{ i.id }}</td>
+            <td>{{ i.name }}</td>
+            <td><img src="{{ i.image.url }}"></td>
+            <td><img class="folderimage" src="static /home/vfy8/Documents/Github-Trainee/freshersbatch4/nature.jpg">
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</form>
+</body>
+</html>
